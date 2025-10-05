@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você é brasileiro?</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é brasileiro ou estrangeiro?</h1>
+
+    <p>Qual é a sua nacionalidade?</p>
+    <input type="text" id="nacionalidade">
+    <button type="button" id="verificar" onclick="verificar()">Verificar</button>
+    <div id="res">Resultado</div>
+
+    <script>
+        function verificar(){
+            var nacionalidade = window.document.getElementById('nacionalidade')
+            var res = document.querySelector('div#res')
+            if(nacionalidade.value.toLowerCase() == 'brasileiro'){
+                res.innerHTML = 'Brasileiro'
+            }
+            else{
+                res.innerHTML = 'Estrangeiro'
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
